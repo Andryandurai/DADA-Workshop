@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, Code2, Compass, ExternalLink, Github, GraduationCap, Layers3, Linkedin, Menu, Moon, Search, ShieldCheck, Sun, Users, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Check, ChevronDown, Code2, Compass, ExternalLink, Github, Layers3, Linkedin, Menu, Moon, Search, ShieldCheck, Sun, Users, X } from 'lucide-react';
 import { activities, asset, categories, faqs, filterWorkshops, members, officialSite, type Activity, type Audience, type CategoryId, type Workshop } from './data';
 import Contact from './Contact';
 import Doodle from './Doodle';
@@ -41,31 +41,15 @@ function Navbar() {
   </div></header>;
 }
 
-function Hero() {
-  return <section id="home" className="hero" tabIndex={-1}><div className="container hero-notebook">
-    <div className="hero-topline"><span className="journal-label"><Doodle kind="star" size={23} />A little curiosity. A world of possibilities.</span><span className="mono edition-label">THE DADA WORKSHOP NOTEBOOK / VOL. 01</span></div>
-    <div className="hero-grid"><div className="hero-copy">
-      <p className="hero-kicker mono">FOR THE THINKERS, TINKERERS &amp; WHAT-IF-ERS.</p>
-      <h1>Big ideas.<br /><span className="blue-text">Creative minds.</span><br /><span className="marker-word">Digital magic.</span></h1>
-      <p className="hero-description">From building your first website to exploring AI and inventing something extraordinary — discover technology through creativity, experiments, and hands-on learning with TEAM DADA.</p>
-      <div className="hero-actions"><a href="#workshops" className="button">Explore Workshops<ArrowUpRight size={21} /></a><a href="#contact" className="text-link">Bring DADA to your campus<ArrowRight size={18} /></a></div>
-      <div className="hero-audiences"><span><GraduationCap size={17} />Classes 8–12</span><span><Code2 size={17} />College students</span><span className="hero-annotation">Bring your curiosity.</span></div>
-    </div><div className="hero-visual">
-      <div className="collage-sheet sheet-back" aria-hidden="true" /><div className="collage-sheet sheet-front" aria-hidden="true"><span className="sheet-holes" /></div><span className="tape hero-tape" aria-hidden="true" />
-      <Doodle kind="star" className="hero-star" size={85} /><Doodle kind="arrow" className="hero-doodle-arrow" size={100} /><Doodle kind="flower" className="hero-flower" size={65} />
-      <span className="collage-annotation">your next big idea<br />starts right here.</span><Mascot pose="pointing" alt="The original DADA mascot pointing towards you, ready to create" eager />
-      <div className="subject-note note-code"><CategoryIcon id="coding" size={37} /><span><strong>Make it work.</strong><small>A LITTLE CODE. A LOT POSSIBLE.</small></span></div>
-      <div className="subject-note note-ai"><CategoryIcon id="ai" size={35} /><span><strong>What if…?</strong><small>EXPLORE AI</small></span></div>
-      <div className="subject-note note-design"><CategoryIcon id="design" size={34} /><span><strong>Make it yours.</strong><small>DESIGN &amp; CREATE</small></span></div>
-      <span className="idea-seal"><span>think.</span><span>make.</span><span>repeat.</span></span>
-    </div></div>
-    <div className="hero-foot"><span className="mono">A CREATIVE TECHNOLOGY STUDIO. RIGHT IN YOUR CLASSROOM.</span><a href="#pathways" className="scroll-cue">Turn the page<ArrowDown size={18} /></a></div>
-    </div><div className="signal-strip" aria-hidden="true"><span>Try something new</span><Doodle kind="star" size={24} /><span>Make a little mess</span><Doodle kind="flower" size={25} /><span>Build something brilliant</span><Doodle kind="star" size={24} /><span>Stay curious</span><Doodle kind="flower" size={25} /></div>
-  </section>;
+function PageIntro() {
+  return <section id="home" className="page-intro" tabIndex={-1} aria-labelledby="page-title"><div className="container">
+    <h1 id="page-title">TEAM DADA <span className="marker-word marker-yellow">Workshops</span></h1>
+    <p>Explore creative, hands-on workshops in AI, coding, web development, design, and innovation.</p>
+  </div></section>;
 }
 
 function Pathways({ choose }: { choose: (audience: Audience) => void }) {
-  return <section className="section pathways-section" id="pathways"><div className="container"><Chapter number="01">FIND YOUR PATH</Chapter><div className="section-heading"><h2>Two paths.<br /><span className="marker-word marker-mint">Endless possibilities.</span></h2><p>Just getting curious or ready to go deeper?<br />There’s a place to begin.</p></div>
+  return <section className="section pathways-section" id="pathways"><div className="container"><Chapter number="01">FIND YOUR PATH</Chapter><div className="section-heading"><h2>Two paths. <span className="marker-word marker-mint">Endless possibilities.</span></h2><p>Just getting curious or ready to go deeper?<br />There’s a place to begin.</p></div>
     <div className="pathway-grid"><article id="schools" className="pathway school-path" tabIndex={-1}><div className="pathway-content"><span className="mono green-text">01 / FOR SCHOOLS</span><h3>Your first steps<br />into the future.</h3><p>Meet coding, AI, and design through approachable ideas and creative challenges.</p><dl><div><dt>Classes 8–10</dt><dd>First steps in coding, AI, digital design, and creative technology.</dd></div><div><dt>Classes 11–12</dt><dd>Practical challenges, innovation, and a window into technology careers.</dd></div></dl><button className="text-link" onClick={() => choose('school')}>Explore school workshops<ArrowUpRight size={19} /></button></div><Mascot pose="thinking" alt="DADA mascot thinking about a new idea" /></article>
     <article id="colleges" className="pathway college-path" tabIndex={-1}><div className="pathway-content"><span className="mono orange-text">02 / FOR COLLEGES</span><h3>Build skills.<br />Create what’s next.</h3><p>Connect what you learn with what you can make. Explore technology through practical problem-solving.</p><ul className="pathway-topics"><li>AI tools & prompt engineering</li><li>Web development & programming</li><li>UI/UX & digital creation</li><li>Debugging, innovation & entrepreneurship</li></ul><button className="text-link" onClick={() => choose('college')}>Explore college workshops<ArrowUpRight size={19} /></button></div><Mascot pose="laptop" alt="DADA mascot learning with a laptop" /></article></div>
     <p className="pathway-note mono">A STARTING POINT, NOT A PREREQUISITE. TOPICS CAN BE DISCUSSED FOR YOUR GROUP.</p>
@@ -164,5 +148,5 @@ export default function App() {
     setDetail(null);
     requestAnimationFrame(() => { document.getElementById('contact')?.scrollIntoView(); document.getElementById('contact')?.focus({ preventScroll: true }); });
   }
-  return <div className="site-shell"><a className="skip-link" href="#main">Skip to content</a><Navbar /><main id="main"><Hero /><Pathways choose={choose} /><Catalogue audience={audience} setAudience={setAudience} explore={item => setDetail({ kind: 'workshop', item })} /><Activities explore={item => setDetail({ kind: 'activity', item })} /><Process /><About /><Team /><Contact topics={topics} setTopics={setTopics} selectedActivities={selectedActivities} setActivities={setActivities} /><FAQ /></main><Footer />{detail && <DetailDialog detail={detail} close={() => setDetail(null)} add={addDetail} selected={(detail.kind === 'workshop' ? topics : selectedActivities).includes(detail.item.id)} />}</div>;
+  return <div className="site-shell"><a className="skip-link" href="#main">Skip to content</a><Navbar /><main id="main"><PageIntro /><Pathways choose={choose} /><Catalogue audience={audience} setAudience={setAudience} explore={item => setDetail({ kind: 'workshop', item })} /><Activities explore={item => setDetail({ kind: 'activity', item })} /><Process /><About /><Team /><Contact topics={topics} setTopics={setTopics} selectedActivities={selectedActivities} setActivities={setActivities} /><FAQ /></main><Footer />{detail && <DetailDialog detail={detail} close={() => setDetail(null)} add={addDetail} selected={(detail.kind === 'workshop' ? topics : selectedActivities).includes(detail.item.id)} />}</div>;
 }

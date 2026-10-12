@@ -90,49 +90,15 @@ section[tabindex='-1']:focus { outline: none; }
 .theme-toggle { width: 40px; height: 40px; background: transparent; }
 .menu-toggle { display: none; }
 
-/* Original DADA mascot, paper layers, and subject notes. */
-.hero { position: relative; background-image: radial-gradient(#9e89772d .65px, transparent .65px); background-size: 9px 9px; }
-.hero-topline { display: flex; justify-content: space-between; align-items: center; padding-top: 27px; gap: 20px; }
-.journal-label { display: flex; align-items: center; gap: 10px; font-size: 12px; }
-.journal-label .doodle { color: #c34135; }
-:root[data-theme='dark'] .journal-label .doodle { color: var(--coral); }
-.edition-label { color: var(--muted); font-size: 9px; }
-.hero-grid { display: grid; grid-template-columns: 1.12fr 1fr; gap: 30px; align-items: center; min-height: 655px; padding-block: 45px 34px; }
-.hero-copy { z-index: 2; }
-.hero-kicker { color: var(--muted); font-size: 10px; margin-bottom: 22px; }
-.hero h1 { font-size: clamp(53px, 5.8vw, 84px); font-weight: 800; line-height: 1.025; letter-spacing: -.06em; }
-.hero-description { max-width: 510px; margin-top: 27px; color: var(--muted); font-size: 15px; line-height: 1.85; }
-.hero-actions { display: flex; align-items: center; gap: 23px; margin-top: 28px; flex-wrap: wrap; }
-.hero-actions .text-link { font-size: 12px; gap: 8px; }
-.hero-audiences { display: flex; align-items: center; gap: 19px; margin-top: 35px; font-size: 11px; flex-wrap: wrap; }
-.hero-audiences > span:not(.hero-annotation) { display: flex; gap: 7px; align-items: center; }
-.hero-annotation { font-family: var(--heading); font-size: 13px; color: var(--blue); transform: rotate(-5deg); }
-.hero-visual { position: relative; height: 550px; isolation: isolate; }
-.collage-sheet { position: absolute; width: 72%; height: 77%; top: 10%; left: 13%; border: 1px solid #29272a30; }
-.sheet-back { background: var(--sky); transform: rotate(-8deg); box-shadow: 5px 6px 0 #29272a0c; }
-.sheet-front { background-color: #fffefa; background-image: linear-gradient(90deg, transparent 38px, #ee9b9566 38px, #ee9b9566 39px, transparent 39px), repeating-linear-gradient(0deg, transparent 0 27px, #84b9d63b 27px 28px); transform: rotate(5deg); }
-:root[data-theme='dark'] .sheet-back { background-color: #477c98; }
-:root[data-theme='dark'] .sheet-front { background-color: #e8e2d6; }
-.sheet-holes { position: absolute; left: 12px; top: 20px; bottom: 20px; width: 11px; background: radial-gradient(circle, #cfbe9f 3px, transparent 4px) center top/11px 36px repeat-y; }
-.hero-tape { top: 7%; left: 39%; transform: rotate(7deg); width: 128px; z-index: 1; }
-.hero-visual > .mascot { position: absolute; height: 99%; width: auto; max-width: 100%; object-fit: contain; left: 15%; bottom: 0; z-index: 2; filter: drop-shadow(8px 10px 2px #1a2b4321); }
-.hero-star { position: absolute; top: 3%; right: 1%; color: #cf594b; transform: rotate(12deg); }
-.hero-doodle-arrow { position: absolute; left: 0; top: 32%; color: var(--blue); transform: rotate(40deg); }
-.hero-flower { position: absolute; right: -1%; bottom: 11%; color: var(--blue); }
-.collage-annotation { position: absolute; right: 13%; top: 13%; z-index: 1; font-family: var(--heading); font-size: 16px; color: #433c42; transform: rotate(5deg); line-height: 1.2; }
-.subject-note { position: absolute; z-index: 3; padding: 15px 18px; color: #29272a; display: flex; align-items: center; gap: 10px; border: 1px solid #29272a2b; box-shadow: 3px 5px 0 #29272a0d; }
-.subject-note::before { content: ''; position: absolute; width: 34px; height: 12px; top: -7px; left: 20px; background: #ffffff90; transform: rotate(-4deg); }
-.subject-note strong { display: block; font-family: var(--heading); font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
-.subject-note small { font-family: 'Space Mono', monospace; font-size: 7px; letter-spacing: .03em; display: block; margin-top: 5px; }
-.note-code { left: -4%; bottom: 13%; background: var(--mint); transform: rotate(-6deg); }
-.note-ai { right: -1%; top: 36%; background: var(--lavender); transform: rotate(8deg); }
-.note-design { right: 6%; bottom: 3%; background: var(--peach); transform: rotate(4deg); }
-.idea-seal { width: 94px; height: 94px; position: absolute; z-index: 3; left: 3%; top: 10%; background: var(--yellow); color: #29272a; border: 1px solid #29272a; border-radius: 47% 53% 45% 55%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: var(--heading); font-weight: 750; font-size: 20px; line-height: 1.05; transform: rotate(-12deg); }
-.hero-foot { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed var(--line); gap: 20px; padding-block: 20px 25px; }
-.hero-foot > .mono { font-size: 9px; color: var(--muted); }
-.scroll-cue { font-family: var(--heading); font-size: 14px; display: flex; align-items: center; gap: 13px; min-height: 44px; }
-.signal-strip { display: flex; align-items: center; justify-content: space-evenly; gap: 20px; background: var(--yellow); color: #29272a; border-block: 1px solid #29272a; padding: 17px 25px; font-family: var(--heading); font-size: 19px; font-weight: 650; }
-.signal-strip .doodle:nth-of-type(even) { color: #83431e; }
+/* A compact title keeps the audience pathways in immediate view. */
+.page-intro { padding-top: 32px; }
+.page-intro > .container { padding-bottom: 26px; border-bottom: 1px dashed var(--line); }
+.page-intro h1 { font-size: clamp(30px, 3vw, 42px); line-height: 1.15; }
+.page-intro p { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.section.pathways-section { padding-top: 26px; }
+.pathways-section .chapter { margin-bottom: 18px; }
+.pathways-section .section-heading { margin-bottom: 28px; gap: 24px; }
+.pathways-section .section-heading h2 { font-size: clamp(26px, 2.5vw, 34px); line-height: 1.2; }
 
 /* School and college notebook pages. */
 .pathway-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -272,6 +238,11 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
 .contact-copy > p { color: var(--muted); margin-top: 25px; font-size: 14px; max-width: 385px; }
 .contact-email { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 21px; font-size: 14px; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; flex-wrap: wrap; }
 .contact-email:hover { color: var(--blue); }
+.contact-phones { margin-top: 20px; }
+.contact-phones h3 { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 650; line-height: 1.6; letter-spacing: 0; }
+.contact-phones ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 0; margin: 10px 0 0; }
+.contact-phones a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--control-line); border-radius: 4px; background: var(--paper); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; }
+.contact-phones a:hover, .contact-phones a:focus-visible { color: var(--blue); border-color: var(--blue); background: var(--bg); }
 .contact-art { position: relative; height: 315px; margin-top: 15px; }
 .contact-art > img { position: absolute; height: 100%; width: auto; object-fit: contain; left: 6%; }
 .contact-doodle { position: absolute; right: 13%; top: 22px; color: var(--blue); transform: rotate(25deg); }
@@ -369,15 +340,9 @@ input[type='checkbox'] { width: 17px; height: 17px; flex-shrink: 0; margin: 1px 
 /* Paper details make room for the content as the notebook gets smaller. */
 @keyframes page-reveal { from { opacity: .7; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 .page-reveal { animation: page-reveal .45s ease-out both; }
-@media (hover: hover) { .hero-star { transition: transform .4s ease; } .hero-visual:hover .hero-star { transform: rotate(25deg); } }
-@media (min-width: 1600px) {
-  .hero-grid { min-height: 700px; } .hero-visual { height: 590px; }
-}
+
 @media (max-width: 1279px) {
   .container { width: calc(100% - 80px); } .nav-container { gap: 16px; } .nav-links { gap: 15px; } .brand-caption { display: none; }
-  .hero-grid { gap: 20px; } .hero-visual { height: 515px; } .hero-actions { gap: 16px; } .hero-actions .text-link { font-size: 11px; }
-  .hero-audiences { gap: 16px; } .hero-annotation { display: none; } .subject-note { padding: 12px; } .subject-note strong { font-size: 17px; }
-  .note-code { left: -2%; } .hero-star { right: 0; width: 65px; }
   .pathway { padding-inline: 27px; } .pathway h3 { font-size: 29px; } .pathway > .mascot { right: -14px; width: 39%; } .pathway-content { width: 72%; }
   .about-layout, .contact-layout, .faq-layout { gap: 50px; } .workshop-grid, .activity-grid { gap: 22px; }
   .workshop-card, .activity-card { padding-inline: 22px; } .workshop-card h3 { font-size: 23px; } .activity-card h3 { font-size: 25px; } .activity-label { font-size: 7px; }
@@ -393,12 +358,6 @@ input[type='checkbox'] { width: 17px; height: 17px; flex-shrink: 0; margin: 1px 
 }
 @media (max-width: 1023px) {
   .container, .nav-container { width: calc(100% - 56px); } .section { padding-block: 78px; }
-  .hero-grid { grid-template-columns: 1.08fr 1fr; min-height: 590px; gap: 5px; } .hero h1 { font-size: 57px; } .hero-visual { height: 445px; }
-  .hero-description { font-size: 14px; } .hero-actions { align-items: flex-start; flex-direction: column; gap: 9px; }
-  .hero-audiences { margin-top: 21px; font-size: 10px; gap: 14px; } .subject-note .doodle { width: 25px; } .subject-note { gap: 7px; padding: 11px 10px; }
-  .subject-note strong { font-size: 15px; } .subject-note small { font-size: 6px; } .note-code { bottom: 9%; left: 1%; } .note-ai { right: 0; } .note-design { right: 0; bottom: -1%; }
-  .idea-seal { width: 75px; height: 75px; font-size: 17px; } .collage-annotation { font-size: 12px; } .hero-doodle-arrow { width: 70px; } .hero-flower { right: 0; width: 42px; }
-  .hero-foot > .mono { max-width: 380px; } .edition-label { max-width: 230px; text-align: right; } .signal-strip { font-size: 15px; gap: 14px; } .signal-strip > .doodle:last-child { display: none; }
   .section-heading > p { font-size: 13px; max-width: 260px; } .pathway { padding: 29px 25px 235px; } .pathway-content { width: 100%; }
   .pathway > .mascot { height: 240px; width: 160px; right: 22px; bottom: -3px; }
   .catalogue-tools { align-items: stretch; gap: 16px; } .audience-filter { display: block; } .audience-filter label { display: block; margin-bottom: 6px; } .search-field { align-self: flex-end; }
@@ -418,20 +377,15 @@ input[type='checkbox'] { width: 17px; height: 17px; flex-shrink: 0; margin: 1px 
   .footer-top { align-items: flex-start; } .footer-top > a { flex-direction: column; align-items: flex-start; gap: 5px; } .footer nav { flex-wrap: wrap; justify-content: flex-end; max-width: 300px; gap: 10px 25px; }
 }
 @media (max-width: 767px) {
+  .page-intro { padding-top: 26px; }
+  .page-intro > .container { padding-bottom: 22px; }
+  .page-intro p { font-size: 13px; }
+  .pathways-section .section-heading > p { margin-top: 12px; }
   html { scroll-padding-top: 93px; } body { font-size: 14px; } .container, .nav-container { width: calc(100% - 40px); } .section { padding-block: 62px; } h2 { font-size: 38px; }
   .chapter { margin-bottom: 26px; font-size: 9px; gap: 10px; } .chapter-number { width: 30px; height: 30px; font-size: 11px; } .chapter-line { margin-left: 4px; }
   .section-heading { display: block; margin-bottom: 34px; } .section-heading > p { margin-top: 23px; max-width: 100%; font-size: 13px; }
   .nav-container { min-height: 72px; } .logo { width: 71px; height: 48px; } .brand { gap: 12px; } .brand-caption { padding-left: 12px; font-size: 9px; }
   .nav-links { padding-inline: 20px; max-height: calc(100dvh - 72px); } .nav-actions { gap: 7px; } .theme-toggle, .menu-toggle { width: 40px; height: 40px; }
-  .hero-topline { padding-top: 22px; } .journal-label { font-size: 10px; gap: 6px; } .journal-label .doodle { width: 20px; } .edition-label { display: none; }
-  .hero-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 40px; padding-bottom: 20px; } .hero h1 { font-size: clamp(47px, 10.5vw, 74px); } .hero-kicker { font-size: 8px; margin-bottom: 20px; }
-  .hero-description { margin-top: 23px; font-size: 14px; max-width: 520px; } .hero-actions { margin-top: 26px; flex-direction: row; align-items: center; gap: 14px 23px; } .hero-actions .text-link { font-size: 12px; }
-  .hero-audiences { margin-top: 25px; font-size: 11px; gap: 22px; } .hero-visual { width: min(490px, 100%); height: 495px; justify-self: center; margin-top: 3px; }
-  .hero-star { width: 70px; } .hero-visual > .mascot { left: 17%; } .idea-seal { width: 85px; height: 85px; font-size: 18px; }
-  .subject-note { padding: 14px; } .subject-note strong { font-size: 17px; } .subject-note small { font-size: 7px; } .subject-note .doodle { width: 29px; }
-  .note-code { left: 0; bottom: 13%; } .note-ai { right: 1%; } .note-design { right: 4%; bottom: 3%; } .collage-annotation { font-size: 14px; }
-  .hero-foot { padding-block: 14px 20px; gap: 20px; } .hero-foot > .mono { font-size: 8px; max-width: 230px; } .scroll-cue { font-size: 12px; gap: 8px; flex-shrink: 0; }
-  .signal-strip { flex-wrap: wrap; justify-content: center; padding: 14px 20px; column-gap: 18px; row-gap: 8px; font-size: 14px; } .signal-strip > .doodle { width: 19px; height: 19px; } .signal-strip > .doodle:last-child { display: block; }
   .pathway-grid { grid-template-columns: 1fr; gap: 25px; } .pathway { min-height: 455px; padding: 30px 26px; } .pathway-content { width: 68%; } .pathway h3 { font-size: 29px; }
   .pathway > .mascot { height: 300px; width: 41%; bottom: 10px; right: -8px; } .pathway-note { font-size: 8px; line-height: 1.8; margin-top: 22px; }
   .catalogue-tools { display: grid; grid-template-columns: 1fr; gap: 15px; } .search-field input { font-size: 14px; } .audience-filter { display: flex; justify-content: space-between; } .audience-filter label { margin-bottom: 0; }
@@ -463,11 +417,6 @@ input[type='checkbox'] { width: 17px; height: 17px; flex-shrink: 0; margin: 1px 
   .dialog-inner { padding: 30px 24px; } .detail-kicker { font-size: 8px; padding-right: 40px; } .detail-dialog h2 { font-size: 33px; } .dialog-close { top: 12px; right: 12px; width: 38px; height: 38px; }
 }
 @media (max-width: 479px) {
-  .hero-visual { height: 420px; } .hero-visual > .mascot { left: 15%; } .hero-star { width: 60px; right: 1%; } .hero-flower { width: 40px; } .hero-doodle-arrow { left: -7px; width: 65px; }
-  .subject-note { padding: 11px; gap: 7px; } .subject-note strong { font-size: 15px; } .subject-note small { font-size: 6px; } .subject-note .doodle { width: 27px; }
-  .idea-seal { top: 8%; left: 0; width: 77px; height: 77px; font-size: 17px; } .collage-annotation { right: 9%; top: 24%; font-size: 10px; max-width: 80px; }
-  .hero-foot > .mono { max-width: 185px; font-size: 7px; } .hero-foot { gap: 10px; }
-  .signal-strip { display: grid; grid-template-columns: 1fr 20px 1fr 20px; font-size: 12px; gap: 8px; } .signal-strip > span { text-align: center; }
   .pathway { padding: 28px 24px 230px; min-height: 0; } .pathway-content { width: 100%; } .pathway h3 { font-size: 33px; } .pathway > .mascot { width: 155px; height: 235px; right: 28px; bottom: -3px; } .pathway .text-link { font-size: 13px; }
   .workshop-grid, .activity-grid { grid-template-columns: 1fr; gap: 24px; } .workshop-card { padding: 24px 26px 0; } .card-top { flex-wrap: nowrap; font-size: 9px; margin-bottom: 17px; }
   .workshop-card h3 { font-size: 27px; } .workshop-card > p { font-size: 13px; } .card-action { font-size: 13px; }
@@ -481,9 +430,7 @@ input[type='checkbox'] { width: 17px; height: 17px; flex-shrink: 0; margin: 1px 
   .empty-state { padding: 25px; gap: 15px; flex-direction: column; } .empty-state .mascot { width: 85px; } .footer-bottom { flex-direction: column; gap: 8px; }
 }
 @media (max-width: 359px) {
-  .container, .nav-container { width: calc(100% - 32px); } .brand-caption { display: none; } h2 { font-size: 34px; } .hero h1 { font-size: 44px; } .hero-kicker { font-size: 7px; }
-  .hero-visual { height: 365px; } .subject-note { padding: 9px; } .subject-note strong { font-size: 13px; } .subject-note .doodle { width: 22px; }
-  .idea-seal { width: 65px; height: 65px; font-size: 15px; } .hero-tape { width: 100px; } .collage-annotation { font-size: 10px; } .hero-audiences { gap: 12px; font-size: 10px; } .hero-foot > .mono { max-width: 155px; }
+  .container, .nav-container { width: calc(100% - 32px); } .brand-caption { display: none; } h2 { font-size: 34px; }
   .pathway { padding-inline: 21px; } .pathway h3 { font-size: 29px; } .activity-label { font-size: 7px; } .about-manifesto h2 { font-size: 36px; }
   .member-copy h3 { font-size: 19px; } .member-role { font-size: 9px; min-height: 45px; } .member-socials a { width: 32px; height: 32px; }
   .contact-copy h2 { font-size: 43px; } .contact-email { font-size: 12px; } .enquiry-form { padding-inline: 16px; } .form-heading { font-size: 8px; }

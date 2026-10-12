@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { ArrowUpRight, Check, Copy, Download, Mail } from 'lucide-react';
+import { ArrowUpRight, Check, Copy, Download, Mail, Phone } from 'lucide-react';
 import Doodle from './Doodle';
 import { activities, asset, contactEmail, workshops } from './data';
 import { composeEnquiry, deliverEnquiry, emptyEnquiry, localDate, validateEnquiry, type EnquiryErrors, type EnquiryValues } from './enquiry';
@@ -62,6 +62,13 @@ export default function Contact({ topics, setTopics, selectedActivities, setActi
         <span className="studio-note">Let’s make a plan.</span><h2>Got a school<br />or college<br /><span className="marker-word marker-peach">in mind?</span></h2>
         <p>Let’s turn curiosity into a creative learning experience. Tell us what your students would love to explore, and we’ll start shaping the possibilities together.</p>
         <a className="contact-email" href={`mailto:${contactEmail}`}><Mail size={18} />{contactEmail}<ArrowUpRight size={18} /></a>
+        <div className="contact-phones" role="group" aria-labelledby="contact-phones-heading">
+          <h3 id="contact-phones-heading">Official TEAM DADA Contact Numbers</h3>
+          <ul>
+            <li><a href="tel:+919944852361"><Phone size={17} aria-hidden="true" />+91 9944852361</a></li>
+            <li><a href="tel:+917358528466"><Phone size={17} aria-hidden="true" />+91 7358528466</a></li>
+          </ul>
+        </div>
         <div className="contact-art"><Doodle kind="arrow" className="contact-doodle" size={100} /><img src={asset('mascot/dada-mature-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">Good ideas start<br />with a hello.</span></div>
       </div>
       <form ref={form} className="enquiry-form" onSubmit={submit} noValidate aria-busy={busy}>
