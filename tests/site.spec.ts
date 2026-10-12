@@ -115,10 +115,11 @@ test('desktop, tablet and narrow mobile have no overflow, broken assets or conso
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   await page.goto('/');
-  for (const width of [1440, 1024, 768, 390, 320]) {
+  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+  for (const width of [1440, 1180, 1024, 768, 600, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
-    expect(overflow, `horizontal overflow at ${width}px`).toBe(false);
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth), { message: `horizontal overflow at ${width}px` }).toBe(false);
   }
   for (const section of ['pathways', 'workshops', 'activities', 'team', 'contact']) await page.locator(`#${section}`).scrollIntoViewIfNeeded();
   await expect.poll(() => page.locator('img').evaluateAll(images => (images as HTMLImageElement[]).filter(img => img.loading !== 'lazy' || img.complete).every(img => img.naturalWidth > 0))).toBe(true);
@@ -130,16 +131,16 @@ test('desktop, tablet and narrow mobile have no overflow, broken assets or conso
 for (const theme of ['dark', 'light']) test(`${theme} theme passes automated WCAG AA checks`, async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('/');
-  if (theme === 'light') await page.getByRole('button', { name: 'Switch to light mode' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  if (theme === 'dark') await page.getByRole('button', { name: 'Switch to dark mode' }).click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
   const audit = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
   expect(audit.violations).toEqual([]);
   await page.getByRole('button', { name: 'Explore workshop: From Zero to Website — HTML & CSS', exact: true }).click();
   const modalAudit = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
   expect(modalAudit.violations).toEqual([]);
-  if (theme === 'light') {
-    await page.keyboard.press('Escape'); await page.reload();
-    await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
-  }
+  await page.keyboard.press('Escape'); await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
 });
 
 test('optional endpoint never claims delivery for a rejected, malformed or failed response', async () => {

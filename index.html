@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#030405" />
+    <meta name="theme-color" content="#fff9ef" />
     <title>TEAM DADA Workshops | AI, Coding, Design &amp; Technology</title>
     <meta name="description" content="Explore interactive AI, coding, web development, design, and innovation workshops for school and college students with TEAM DADA." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="TEAM DADA Workshops | Learn. Build. Experiment. Innovate." />
+    <meta property="og:title" content="TEAM DADA Workshops | Big Ideas. Creative Minds. Digital Magic." />
     <meta property="og:description" content="Hands-on technology workshops and creative challenges for schools and colleges. Find your next learning experience with TEAM DADA." />
     <meta property="og:image:alt" content="The original DADA mascot, ready to build." />
     <meta name="twitter:card" content="summary_large_image" />
     <!-- SITE_METADATA -->
     <link rel="icon" href="/assets/branding/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/assets/fonts/fonts.css" />
-    <script>try{document.documentElement.dataset.theme=localStorage.getItem('dada-theme')==='light'?'light':'dark'}catch{}</script>
+    <script>try{const theme=localStorage.getItem('dada-theme')==='dark'?'dark':'light';document.documentElement.dataset.theme=theme;document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#20252b':'#fff9ef'}catch{}</script>
   </head>
   <body>
     <div id="root"></div>

@@ -2,7 +2,7 @@
 
 Downloaded on 12 October 2026 from the official [darshansathish2006/DADA repository](https://github.com/darshansathish2006/DADA), branch `master`, commit [`5e45de902889614edf718e379be231f22dc31d53`](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53). Branding, portraits and fonts retain their original source bytes from this commit. The five mascot poses were refreshed from the newer official commit documented below. Each downloaded file was verified against its source Git blob hash. Asset paths below are relative to `public/assets/`.
 
-## Mascot update ? 12 October 2026
+## Mascot update — 12 October 2026
 
 The five `dada-mature-*.png` poses are the exact files referenced by the updated live [official DADA site](https://darshansathish2006.github.io/DADA/) and its [content configuration](https://github.com/darshansathish2006/DADA/blob/d203f092c48a904ef5e051b473e3140dd8ef3d2f/src/content.js), downloaded from commit [`d203f092c48a904ef5e051b473e3140dd8ef3d2f`](https://github.com/darshansathish2006/DADA/tree/d203f092c48a904ef5e051b473e3140dd8ef3d2f/public/assets/mascot). All five Git blob hashes match upstream. Their RGBA dimensions remain 1024 ? 1536. Original pixels and alpha channels are preserved. Hero, school/college pathways, empty state, contact, final CTA and social metadata use these updated assets. Previous neon files are absent from the deployed asset set and retained in Git history.
 
@@ -26,15 +26,18 @@ Sources: [branding](https://github.com/darshansathish2006/DADA/tree/5e45de902889
 
 ## Fonts
 
-The original [fonts.css, seven WOFF2 files, and three license files](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/fonts) are stored together in `fonts/`. Relative CSS URLs are unchanged.
+The original [seven WOFF2 files and three license files](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/fonts) are stored together in `fonts/`. Their original declarations and relative URLs remain in `fonts.css`, with one additional heading-font declaration for the craft redesign.
 
 | Family | Files | Weights |
 | --- | --- | --- |
 | Barlow Condensed | `dada-font-0.woff2` through `dada-font-3.woff2` | 600, 700, 800, 900 |
 | DM Sans | `dada-font-4.woff2` | Variable 400–750 |
 | Space Mono | `dada-font-5.woff2`, `dada-font-6.woff2` | 400, 700 |
+| Bricolage Grotesque | `bricolage-grotesque-latin.woff2` | Variable 400–800, optical size 12–96 |
 
 Font licenses: `barlowcondensed-LICENSE.txt`, `dmsans-LICENSE.txt`, `spacemono-LICENSE.txt`. Keep the supplied SIL Open Font License notices with distributions. Total original assets: **22 files, 11,061,219 bytes**.
+
+For the craft redesign, the 76,888-byte Bricolage Grotesque Latin WOFF2 was downloaded from the [Google Fonts stylesheet](https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap) on 12 October 2026. Its [SIL Open Font License](https://github.com/google/fonts/blob/main/ofl/bricolagegrotesque/OFL.txt) is included as `bricolagegrotesque-LICENSE.txt`. It is self-hosted; visitors make no Google Fonts request. The original logo, mascot images and photographs are unchanged. Decorative stars, arrows, flowers and category doodles are project-native SVG paths in `src/Doodle.tsx`; paper textures, tape and highlights are CSS.
 
 ## Verified public team data
 

@@ -2,7 +2,7 @@
 
 A dedicated React, TypeScript, and Vite site for DADA's school and college workshops. Built separately from the original portfolio. Includes all 10 workshop descriptions and 10 activities from `WORKSHOP IDEAS.docx`, search and combined filters, workshop/activity dialogs, audience pathways, verified team profiles, an institutional enquiry form, FAQs, and dark/light themes.
 
-Repository: [Andryandurai/DADA-Workshop](https://github.com/Andryandurai/DADA-Workshop). Configured GitHub Pages address: [andryandurai.github.io/DADA-Workshop/](https://andryandurai.github.io/DADA-Workshop/). The site becomes available at that address once Pages is enabled and its deployment workflow succeeds.
+Repository: [Andryandurai/DADA-Workshop](https://github.com/Andryandurai/DADA-Workshop). Live GitHub Pages site: [andryandurai.github.io/DADA-Workshop/](https://andryandurai.github.io/DADA-Workshop/). Updates deploy through the existing GitHub Actions workflow when pushed to `main`.
 
 ## Run locally
 
@@ -23,6 +23,7 @@ workshops/
   src/
     App.tsx            Page sections, filters, navigation and accessible dialogs
     Contact.tsx        Institutional enquiry and email draft handoff
+    Doodle.tsx         Lightweight decorative SVGs and category illustrations
     data.ts            Typed workshop/activity data and verified team profiles
     enquiry.ts         Validation, draft composition and optional delivery adapter
     main.tsx           React entry point
@@ -69,7 +70,9 @@ For domain-root hosting, use `/` as the base. Always match the canonical URL to 
 
 ## Content and design decisions
 
-- The brand colours, Barlow Condensed/DM Sans/Space Mono fonts, sharp borders, outlined headings, navigation and mascots follow the official portfolio. Light-theme accent inks use the original accessible dark variants.
+- The workshop notebook uses warm ivory paper, charcoal text, official blue accents, pastel notes, decorative tape, marker underlines and original SVG doodles. Sections share a clear grid while using distinct notebook, challenge-board, polaroid and planning-desk compositions.
+- Self-hosted Bricolage Grotesque gives headings an expressive studio feel. Original DM Sans body text and Space Mono annotations remain; original Barlow font files are retained. Light is the default theme; the optional dark notebook theme persists across visits. Both themes use contrast-tested text colours and visible keyboard focus.
+- Gentle one-time section reveals, paper-card lifts and marker hover states respect reduced-motion preferences. Decorative SVGs are hidden from assistive technology; they never replace labels or functionality. Mobile forms use a single column and 16px input text.
 - Names, roles, portraits, introductions and social URLs follow current official source, rather than older role examples in the brief. The workshop display order, as requested, is Darshan C S, Andryan Durai Jebin, Akshaya P, then Dinesh G. Kapilamithran is not included because the current official team data does not list that profile.
 - Workshop descriptions and activity concepts are preserved. The DOCX's repeated final activity-category heading is normalised to Coding & Debugging, as specified by the master brief. Catalogue cards use short introductory summaries; detail dialogs retain full descriptions.
 - School/college suitability is editable recommendation data in `src/data.ts`, not a restriction or prerequisite. The two college-focused starting points are prompt engineering and game/debugging; introductory internet and first coding are school starting points. Other topics cover both pathways. All can be discussed for a different group.
@@ -78,8 +81,8 @@ For domain-root hosting, use `/` as the base. Always match the canonical URL to 
 
 ## Verification
 
-Verified on 12 October 2026: `npm run build` passes strict TypeScript and the production bundle; `npm test` passes all **9 tests**. Automated WCAG AA scans report no violations for either theme or their workshop dialogs. Browser checks cover 320, 390, 768, 1024 and 1440 pixel widths with no horizontal overflow, missing anchors, image failures or console exceptions. The production build was additionally served and checked under `/workshops-test/`: all 10 cards, original fonts, images and generated canonical URL resolved correctly. That synthetic deployment fixture is ignored under `.artifacts/` and is not the published build.
+The redesign is validated using strict TypeScript, a production build, the **9-test** Playwright suite, visual inspection and automated WCAG AA scans for both themes and workshop dialogs. Responsive checks cover 320, 390, 600, 768, 1024, 1180 and 1440 pixel widths after fonts load. The production build is also checked under the actual `/DADA-Workshop/` path, including local fonts, original imagery, the catalogue and generated canonical URL. Review screenshots and test artefacts stay in ignored local directories.
 
 The test suite covers catalogue search/category/audience combinations and reset, empty states, activity filters, native-dialog focus containment and restoration, selection transfer, mobile navigation, FAQ expansion, form errors, multiple selections, draft generation/download without submission, broken anchors/assets, console errors, viewport overflow from 320 to 1440 pixels, dark/light accessibility scans, and rejection handling for the optional endpoint.
 
-Automated accessibility checks complement the keyboard and visual checks; they are not a claim of complete WCAG certification. No live enquiry has been sent. GitHub Actions still needs to run in the destination repository before a public Pages deployment can be verified.
+Automated accessibility checks complement the keyboard and visual checks; they are not a claim of complete WCAG certification. No live enquiry is sent during testing. The original full-resolution PNGs remain the main download cost; the redesign adds no dependencies or replacement imagery.

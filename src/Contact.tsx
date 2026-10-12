@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { ArrowUpRight, Check, Copy, Download, Mail } from 'lucide-react';
+import Doodle from './Doodle';
 import { activities, asset, contactEmail, workshops } from './data';
 import { composeEnquiry, deliverEnquiry, emptyEnquiry, localDate, validateEnquiry, type EnquiryErrors, type EnquiryValues } from './enquiry';
 
@@ -56,15 +57,15 @@ export default function Contact({ topics, setTopics, selectedActivities, setActi
     setStatus('Draft downloaded. It has not been sent. Email it to TEAM DADA when ready.');
   }
   return <section id="contact" className="section contact-section" tabIndex={-1}>
-    <div className="container"><div className="chapter"><span>[ 07 / LET’S CONNECT ]</span><span className="chapter-line" /></div>
+    <div className="container"><div className="chapter"><span className="chapter-number">07</span><span className="chapter-title">THE IDEA SUBMISSION DESK</span><span className="chapter-line" /></div>
       <div className="contact-layout"><div className="contact-copy">
-        <h2>LET’S BRING<br />TECHNOLOGY<br /><span className="outline green-outline">TO YOUR CAMPUS.</span></h2>
-        <p>Planning a school session, college workshop, or interactive technology event? Tell us about your audience and the topics you’re interested in. Let’s explore what TEAM DADA can create together.</p>
+        <span className="studio-note">Let’s make a plan.</span><h2>Got a school<br />or college<br /><span className="marker-word marker-peach">in mind?</span></h2>
+        <p>Let’s turn curiosity into a creative learning experience. Tell us what your students would love to explore, and we’ll start shaping the possibilities together.</p>
         <a className="contact-email" href={`mailto:${contactEmail}`}><Mail size={18} />{contactEmail}<ArrowUpRight size={18} /></a>
-        <div className="contact-art"><img src={asset('mascot/dada-mature-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">GOOD IDEAS START<br />WITH A HELLO.</span></div>
+        <div className="contact-art"><Doodle kind="arrow" className="contact-doodle" size={100} /><img src={asset('mascot/dada-mature-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">Good ideas start<br />with a hello.</span></div>
       </div>
       <form ref={form} className="enquiry-form" onSubmit={submit} noValidate aria-busy={busy}>
-        <div className="form-heading mono"><span>YOUR NEXT LEARNING EXPERIENCE</span><span>↗ DADA</span></div>
+        <div className="form-heading mono"><span>YOUR NEXT CHAPTER STARTS HERE</span><Doodle kind="design" size={28} /></div>
         <p className="form-note">Fields marked <span aria-hidden="true">*</span> are required.</p>
         <fieldset disabled={busy} className="form-fields"><legend className="sr-only">Institutional workshop enquiry</legend>
           <div className="form-row"><div className="field"><label htmlFor="enquiry-name">Your name *</label><input {...props('name')} required autoComplete="name" maxLength={120} placeholder="Your full name" />{error('name')}</div><div className="field"><label htmlFor="enquiry-email">Email address *</label><input {...props('email')} required autoComplete="email" type="email" maxLength={254} placeholder="you@institution.edu" />{error('email')}</div></div>
