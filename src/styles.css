@@ -187,6 +187,33 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
 .activity-note { font-size: 11px; color: var(--muted); max-width: 760px; padding-right: 80px; margin-top: 35px; }
 .board-corner { position: absolute; bottom: -30px; right: 5px; color: var(--blue); transform: rotate(-12deg); }
 
+/* Mascot notes fill the two spare desktop cells after the ten examples. */
+.possibilities-note { grid-column: span 2; align-self: center; display: grid; grid-template-columns: 170px minmax(0, 1fr); align-items: center; gap: 24px; min-width: 0; padding: 6px 12px 6px 20px; }
+.possibilities-workshops { --note-paper: var(--peach-paper); }
+.possibilities-activities { --note-paper: var(--mint-paper); }
+.possibilities-art { position: relative; height: 230px; }
+.possibilities-art > .mascot { width: 100%; height: 100%; object-fit: contain; }
+.possibilities-doodle { position: absolute; top: 20px; right: -18px; color: var(--blue); transform: rotate(-35deg); }
+.possibilities-activities .possibilities-doodle { top: 4px; right: -6px; width: 40px; transform: rotate(14deg); }
+.possibilities-copy { position: relative; padding: 24px; background: var(--note-paper); border: 1px solid var(--line); border-radius: 4px 14px 4px 4px; box-shadow: var(--shadow); }
+.possibilities-tape { width: 78px; height: 22px; top: -12px; left: 25px; transform: rotate(-4deg); }
+.possibilities-copy h3 { font-size: clamp(27px, 2.2vw, 32px); line-height: 1.12; text-wrap: balance; }
+.possibilities-copy p { margin-top: 13px; font-size: 13px; line-height: 1.75; color: var(--muted); }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .possibilities-note { grid-template-columns: 135px minmax(0, 1fr); gap: 16px; padding-inline: 6px; }
+  .possibilities-copy { padding: 20px; }
+}
+@media (max-width: 1023px) {
+  .possibilities-note { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .possibilities-note { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 10px; padding: 12px 0 4px; }
+  .possibilities-art { width: 150px; height: 205px; }
+  .possibilities-workshops .possibilities-doodle { top: auto; bottom: 8px; transform: rotate(30deg); }
+  .possibilities-copy { width: 100%; max-width: 460px; padding: 25px 22px; }
+  .possibilities-copy h3 { font-size: 28px; }
+}
+
 /* Four steps connected by relaxed drawn lines. */
 .process-section { border-block: 1px solid var(--line); }
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 35px; list-style: none; padding: 0; margin: 56px 0 0; }
