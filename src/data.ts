@@ -77,8 +77,8 @@ export const activities: Activity[] = [
 export const members = [
   { name: 'Darshan C S', role: 'Technical Expert, Co-Lead Developer', introduction: 'Full stack engineering and AI development.', image: 'darshan-c-s.jpg', github: 'https://github.com/darshansathish2006', linkedin: 'https://www.linkedin.com/in/darshan-c-s-77ab43331', portfolio: 'https://darshancs.vercel.app' },
   { name: 'Andryan Durai Jebin', role: 'Co-Lead Developer', introduction: 'Backend development and AI engineering.', image: 'andryan-durai-jebin.jpg', github: 'https://github.com/Andryandurai', linkedin: 'https://www.linkedin.com/in/andryan-durai-bb2b40331', portfolio: 'https://andryan-portfolio.vercel.app/' },
-  { name: 'Dinesh G', role: 'Data Analyst, UI/UX Designer', introduction: 'Works across data analysis and interface design.', image: 'dinesh-g.jpg', github: 'https://github.com/Dinesh6618/', linkedin: 'https://www.linkedin.com/in/dinesh6618/', portfolio: '' },
   { name: 'Akshaya P', role: 'Frontend Developer, Data Analyst', introduction: 'Builds frontend interfaces and works with data.', image: 'akshaya-p.jpg', github: 'https://github.com/Akshaya0206-tech', linkedin: 'https://www.linkedin.com/in/akshaya-p-18693b331/', portfolio: '' },
+  { name: 'Dinesh G', role: 'Data Analyst, UI/UX Designer', introduction: 'Works across data analysis and interface design.', image: 'dinesh-g.jpg', github: 'https://github.com/Dinesh6618/', linkedin: 'https://www.linkedin.com/in/dinesh6618/', portfolio: '' },
 ];
 
 export const faqs = [
