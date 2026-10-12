@@ -67,6 +67,7 @@ export default function Contact({ topics, setTopics, selectedActivities, setActi
           <ul>
             <li><a href="tel:+919944852361"><Phone size={17} aria-hidden="true" />+91 9944852361</a></li>
             <li><a href="tel:+917358528466"><Phone size={17} aria-hidden="true" />+91 7358528466</a></li>
+            <li><a href="tel:+917305966008"><Phone size={17} aria-hidden="true" />+91 73059 66008</a></li>
           </ul>
         </div>
         <div className="contact-art"><Doodle kind="arrow" className="contact-doodle" size={100} /><img src={asset('mascot/dada-mature-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">Good ideas start<br />with a hello.</span></div>
