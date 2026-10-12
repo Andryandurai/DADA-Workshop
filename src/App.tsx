@@ -7,7 +7,7 @@ const categoryIcons = { web: Globe2, ai: BrainCircuit, coding: Code2, design: Pa
 const navItems = [['Home', 'home'], ['Workshops', 'workshops'], ['Activities', 'activities'], ['For Schools', 'schools'], ['For Colleges', 'colleges'], ['About Us', 'about'], ['Contact', 'contact']];
 const categoryOf = (id: CategoryId) => categories.find(c => c.id === id)!;
 function Chapter({ number, children }: { number: string; children: ReactNode }) { return <div className="chapter"><span>[ {number} / {children} ]</span><span className="chapter-line" /></div>; }
-function Mascot({ pose, alt, className = '', eager = false }: { pose: string; alt: string; className?: string; eager?: boolean }) { return <img className={`mascot ${className}`} src={asset(`mascot/dada-neon-${pose}.png`)} alt={alt} width="1024" height="1536" loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />; }
+function Mascot({ pose, alt, className = '', eager = false }: { pose: string; alt: string; className?: string; eager?: boolean }) { return <img className={`mascot ${className}`} src={asset(`mascot/dada-mature-${pose}.png`)} alt={alt} width="1024" height="1536" loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />; }
 function Logo() { return <img className="logo" src={asset('branding/dada-logo-blue.png')} alt="TEAM DADA" width="1536" height="1024" />; }
 function CategoryIcon({ id, size = 24 }: { id: CategoryId; size?: number }) { const Icon = categoryIcons[id]; return <Icon size={size} aria-hidden="true" />; }
 

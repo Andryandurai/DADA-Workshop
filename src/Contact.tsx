@@ -61,7 +61,7 @@ export default function Contact({ topics, setTopics, selectedActivities, setActi
         <h2>LET’S BRING<br />TECHNOLOGY<br /><span className="outline green-outline">TO YOUR CAMPUS.</span></h2>
         <p>Planning a school session, college workshop, or interactive technology event? Tell us about your audience and the topics you’re interested in. Let’s explore what TEAM DADA can create together.</p>
         <a className="contact-email" href={`mailto:${contactEmail}`}><Mail size={18} />{contactEmail}<ArrowUpRight size={18} /></a>
-        <div className="contact-art"><img src={asset('mascot/dada-neon-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">GOOD IDEAS START<br />WITH A HELLO.</span></div>
+        <div className="contact-art"><img src={asset('mascot/dada-mature-waving.png')} alt="DADA mascot waving hello" width="1024" height="1536" loading="lazy" /><span className="sticker mono">GOOD IDEAS START<br />WITH A HELLO.</span></div>
       </div>
       <form ref={form} className="enquiry-form" onSubmit={submit} noValidate aria-busy={busy}>
         <div className="form-heading mono"><span>YOUR NEXT LEARNING EXPERIENCE</span><span>↗ DADA</span></div>

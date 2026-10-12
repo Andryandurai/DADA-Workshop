@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), {
       name: 'dada-metadata',
       transformIndexHtml(html) {
-        return html.replace('<!-- SITE_METADATA -->', siteUrl ? `<link rel="canonical" href="${siteUrl}/" /><meta property="og:url" content="${siteUrl}/" /><meta property="og:image" content="${siteUrl}/assets/mascot/dada-neon-pointing.png" />` : '');
+        return html.replace('<!-- SITE_METADATA -->', siteUrl ? `<link rel="canonical" href="${siteUrl}/" /><meta property="og:url" content="${siteUrl}/" /><meta property="og:image" content="${siteUrl}/assets/mascot/dada-mature-pointing.png" />` : '');
       },
       generateBundle() {
         this.emitFile({ type: 'asset', fileName: 'robots.txt', source: `User-agent: *\nAllow: /\n${siteUrl ? `Sitemap: ${siteUrl}/sitemap.xml\n` : ''}` });

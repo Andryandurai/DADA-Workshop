@@ -1,6 +1,10 @@
 # DADA asset provenance
 
-Downloaded on 12 October 2026 from the official [darshansathish2006/DADA repository](https://github.com/darshansathish2006/DADA), branch `master`, commit [`5e45de902889614edf718e379be231f22dc31d53`](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53). All files retain their upstream filenames and bytes. Their Git blob hashes were verified against this commit. Asset paths below are relative to `public/assets/`.
+Downloaded on 12 October 2026 from the official [darshansathish2006/DADA repository](https://github.com/darshansathish2006/DADA), branch `master`, commit [`5e45de902889614edf718e379be231f22dc31d53`](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53). Branding, portraits and fonts retain their original source bytes from this commit. The five mascot poses were refreshed from the newer official commit documented below. Each downloaded file was verified against its source Git blob hash. Asset paths below are relative to `public/assets/`.
+
+## Mascot update ? 12 October 2026
+
+The five `dada-mature-*.png` poses are the exact files referenced by the updated live [official DADA site](https://darshansathish2006.github.io/DADA/) and its [content configuration](https://github.com/darshansathish2006/DADA/blob/d203f092c48a904ef5e051b473e3140dd8ef3d2f/src/content.js), downloaded from commit [`d203f092c48a904ef5e051b473e3140dd8ef3d2f`](https://github.com/darshansathish2006/DADA/tree/d203f092c48a904ef5e051b473e3140dd8ef3d2f/public/assets/mascot). All five Git blob hashes match upstream. Their RGBA dimensions remain 1024 ? 1536. Original pixels and alpha channels are preserved. Hero, school/college pathways, empty state, contact, final CTA and social metadata use these updated assets. Previous neon files are absent from the deployed asset set and retained in Git history.
 
 ## Branding and imagery
 
@@ -8,17 +12,17 @@ Downloaded on 12 October 2026 from the official [darshansathish2006/DADA reposit
 | --- | --- | ---: | --- |
 | `branding/dada-logo-blue.png` | 1536 × 1024 | 1,485,961 | RGBA; transparent background |
 | `branding/favicon.svg` | SVG viewBox | 223 | Native vector |
-| `mascot/dada-neon-celebrating.png` | 1024 × 1536 | 1,828,045 | RGBA; transparent background |
-| `mascot/dada-neon-laptop.png` | 1024 × 1536 | 1,880,793 | RGBA; transparent background |
-| `mascot/dada-neon-pointing.png` | 1024 × 1536 | 1,794,226 | RGBA; transparent background |
-| `mascot/dada-neon-thinking.png` | 1024 × 1536 | 1,734,769 | RGBA; transparent background |
-| `mascot/dada-neon-waving.png` | 1024 × 1536 | 1,850,047 | RGBA; transparent background |
+| `mascot/dada-mature-celebrating.png` | 1024 × 1536 | 1,828,045 | RGBA; transparent background |
+| `mascot/dada-mature-laptop.png` | 1024 × 1536 | 1,880,793 | RGBA; transparent background |
+| `mascot/dada-mature-pointing.png` | 1024 × 1536 | 1,794,226 | RGBA; transparent background |
+| `mascot/dada-mature-thinking.png` | 1024 × 1536 | 1,734,769 | RGBA; transparent background |
+| `mascot/dada-mature-waving.png` | 1024 × 1536 | 1,850,047 | RGBA; transparent background |
 | `team/akshaya-p.jpg` | 900 × 900 | 128,701 | RGB |
 | `team/andryan-durai-jebin.jpg` | 900 × 900 | 119,117 | RGB |
 | `team/darshan-c-s.jpg` | 854 × 845 | 80,704 | RGB |
 | `team/dinesh-g.jpg` | 600 × 600 | 54,905 | RGB |
 
-Sources: [branding](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/branding), [individual mascot poses](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/mascot), [team portraits](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/team). No poster sheets or replacement imagery were downloaded. PNG alpha channels span 0–254 and contain substantial fully transparent regions. Preserve this alpha in any future optimization. These assets are reused for the requested DADA site; no independent open image license is asserted.
+Sources: [branding](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/branding), [individual mascot poses](https://github.com/darshansathish2006/DADA/tree/d203f092c48a904ef5e051b473e3140dd8ef3d2f/public/assets/mascot), [team portraits](https://github.com/darshansathish2006/DADA/tree/5e45de902889614edf718e379be231f22dc31d53/public/assets/team). No poster sheets or replacement imagery were downloaded. PNG alpha channels span 0–254 and contain substantial fully transparent regions. Preserve this alpha in any future optimization. These assets are reused for the requested DADA site; no independent open image license is asserted.
 
 ## Fonts
 
@@ -30,7 +34,7 @@ The original [fonts.css, seven WOFF2 files, and three license files](https://git
 | DM Sans | `dada-font-4.woff2` | Variable 400–750 |
 | Space Mono | `dada-font-5.woff2`, `dada-font-6.woff2` | 400, 700 |
 
-Font licenses: `barlowcondensed-LICENSE.txt`, `dmsans-LICENSE.txt`, `spacemono-LICENSE.txt`. Keep the supplied SIL Open Font License notices with distributions. Total original assets: **22 files, 11,132,462 bytes**.
+Font licenses: `barlowcondensed-LICENSE.txt`, `dmsans-LICENSE.txt`, `spacemono-LICENSE.txt`. Keep the supplied SIL Open Font License notices with distributions. Total original assets: **22 files, 11,061,219 bytes**.
 
 ## Verified public team data
 
